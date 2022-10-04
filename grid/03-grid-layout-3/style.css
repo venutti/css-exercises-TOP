@@ -89,3 +89,60 @@
   font-size: 13px;
   font-weight: normal;  
 }
+
+/*solution*/
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 4px;
+}
+/*HEADER*/
+.header {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+}
+.logo {
+  justify-self: start;
+}
+.menu {
+  align-self: center;
+}
+.header ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+/*SIDEBAR*/
+.sidebar {
+  grid-row: 2 / 4;
+  display: grid;
+  gap: 50px;
+}
+.sidebar div {
+  display: grid;
+  place-items: center;
+}
+/*NAV*/
+.nav ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+/*ARTICLE*/
+.article {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+.article .card {
+  height: 200px;
+}
+.article .card p {
+  padding: 5px;
+}
+/*FOOTER*/
+.footer{
+  grid-column: 1 / 3;
+}
